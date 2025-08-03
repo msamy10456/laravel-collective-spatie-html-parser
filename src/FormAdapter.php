@@ -61,7 +61,14 @@ class FormAdapter
 
         return $this->mergeOptions($element, $options);
     }
-
+   public function style($path = null)
+    {
+        return '<link rel="stylesheet" type="text/css" href="' . asset($path) . '">';
+    }
+    public function script($path = null)
+    {
+        return   '<script src="' . asset($path) . '"></script>';
+    }
     public function select(
         $name,
         $list = [],
